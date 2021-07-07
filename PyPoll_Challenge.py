@@ -5,8 +5,17 @@
 import csv
 import os
 
+# Modification 1
+# It can read other cvs, and generate the analysis about this information. It's has to be in the Resorces folder.
+name_file = input("Enter the name of the csv: ")
+
+# Modification 2
+# Chose wich County wants to calculate.
+
+
 # Add a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
+#file_to_load = os.path.join("Resources", "election_results.csv")
+file_to_load = os.path.join("Resources", name_file)
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 
