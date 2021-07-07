@@ -55,11 +55,26 @@ Give at least two examples of how this script can be modified to be used for oth
 This code can be used for other elections: 
 
 ### Modification 1 
-It can read another ".csv" file. In this case, works if the file is in the folder Resources, the program will ask for the name of the file, please type "election_results_demo.csv" and the program will read and make the operations that we wrote before.
-I added an input function for asking the name of the csv file, once you give the name, this value is saved in a variable name_file that is used to get the path and then the program will execute the actions and give a result (Line 10 and 15)
+The current code can be used to read another ".csv" file. 
+
+To prove the code please follow these steps:
+
+1. Uncomment line 10 
+    name_file = input("Enter the name of the csv: ")
+2. Comment line 13
+    file_to_load = os.path.join("Resources", "election_results.csv")
+3. Uncomment line 14
+    file_to_load = os.path.join("Resources", name_file)
+4. Run PyPoll_Challenge.py
+5. In this case, we will work with the file that is in the folder Resources; the program will ask for the name of the file, please type "election_results_Mod1.csv"
+6. The program will read the file and process the data.
+7. The program will print the result on the console. 
+8. The program will write the result on the election_analysis.txt file in the Analysis folder.
+
 
 ![alt text](./Resources/modification1.png)
 
+### Modification 2
 
 
 

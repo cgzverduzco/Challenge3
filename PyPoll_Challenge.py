@@ -9,10 +9,6 @@ import os
 # It can read other cvs, and generate the analysis about this information. It's has to be in the Resorces folder.
 name_file = input("Enter the name of the csv: ")
 
-# Modification 2
-# Chose wich County wants to calculate.
-
-
 # Add a variable to load a file from a path.
 #file_to_load = os.path.join("Resources", "election_results.csv")
 file_to_load = os.path.join("Resources", name_file)
@@ -43,6 +39,9 @@ turnout_county = ""
 # Integer that hold the number of votes of the county that had the largest turnout.
 turnout_votes = 0
 turnout_percentage = 0
+
+#Modification 2
+
 
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
