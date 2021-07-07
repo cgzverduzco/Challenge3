@@ -54,8 +54,9 @@ Give at least two examples of how this script can be modified to be used for oth
 
 This code can be used for other elections: 
 
-Modification 1, It can read another ".csv" file. In this case, works if the file is in the folder Resources, the program will ask for the name of the file, please type "election_results_demo.csv" and the program will read and make the operations that we wrote before.
-I added an input function for asking the name of the new csv file, once you give the name the program will execute the action and give a result (Line 10 and 15)
+### Modification 1 
+It can read another ".csv" file. In this case, works if the file is in the folder Resources, the program will ask for the name of the file, please type "election_results_demo.csv" and the program will read and make the operations that we wrote before.
+I added an input function for asking the name of the csv file, once you give the name, this value is saved in a variable name_file that is used to get the path and then the program will execute the actions and give a result (Line 10 and 15)
 
 ![alt text](./Resources/modification1.png)
 
