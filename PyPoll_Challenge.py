@@ -5,13 +5,16 @@
 import csv
 import os
 
-# Modification 1
+# Modification 1 uncomment line 10
 # It can read other cvs, and generate the analysis about this information. It's has to be in the Resorces folder.
-name_file = input("Enter the name of the csv: ")
+# name_file = input("Enter the name of the csv: ")
 
-# Add a variable to load a file from a path.
-#file_to_load = os.path.join("Resources", "election_results.csv")
-file_to_load = os.path.join("Resources", name_file)
+# Add a variable to load a file from a path. For Modification 1. Comment line 13
+file_to_load = os.path.join("Resources", "election_results.csv")
+
+# Modification 1 uncomment line 16
+# file_to_load = os.path.join("Resources", name_file)
+
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 
