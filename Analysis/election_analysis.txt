@@ -1,22 +1,22 @@
 
-Senate Election Results
+Election Results
 -------------------------
-Total Votes: 307,666
+Total Votes: 369,711
 -------------------------
 
 County Votes:
-Filadelfia: 12.3% (37,779)
-Baltimore: 79.8% (245,501)
-Silver Spring: 7.9% (24,386)
+Jefferson: 10.5% (38,855)
+Denver: 82.8% (306,055)
+Arapahoe: 6.7% (24,801)
 
 -------------------------
-Largest County Turnout: Baltimore
+Largest County Turnout: Denver
 -------------------------
-Ronald Regan: 27.3% (83,937)
-Juliet Deek: 69.0% (212,290)
-David Hoff: 3.7% (11,439)
+Charles Casper Stockham: 23.0% (85,213)
+Diana DeGette: 73.8% (272,892)
+Raymon Anthony Doane: 3.1% (11,606)
 -------------------------
-Winner: Juliet Deek
-Winning Vote Count: 212,290
-Winning Percentage: 69.0%
+Winner: Diana DeGette
+Winning Vote Count: 272,892
+Winning Percentage: 73.8%
 -------------------------
