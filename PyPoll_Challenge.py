@@ -2,6 +2,7 @@
 """PyPoll Homework Challenge Solution."""
 
 # Add our dependencies.
+from collections import Counter
 import csv
 import os
 
@@ -10,7 +11,7 @@ import os
 # name_file = input("Enter the name of the csv: ")
 
 # Add a variable to load a file from a path. For Modification 1. Comment line 13
-file_to_load = os.path.join("Resources", "election_results.csv")
+file_to_load = os.path.join("Resources", "election_results_Mod2.csv")
 
 # Modification 1 uncomment line 16
 # file_to_load = os.path.join("Resources", name_file)
@@ -43,7 +44,34 @@ turnout_county = ""
 turnout_votes = 0
 turnout_percentage = 0
 
-#Modification 2
+# Modification 2 ----------------------------------------------------------- Lines 47 to 74
+# Create list for get the uniques values in the colummns in the file
+election_options = []   
+# Create string for asking
+ask_election = "Select election: "
+# get de header and uniques string
+with open(file_to_load) as election_data:
+    reader = csv.reader(election_data)
+    # Get the header
+    header = next(reader)
+# For each row in the CSV file.
+    for row in reader:
+        election_name = row [3]
+        # if the election does not match any existing election in the election options.
+        if election_name not in election_options:
+            # Add the existing county to the list of counties.
+            election_options.append(election_name)
+    # Generate the string for the options
+    for i in range (0, len(election_options)):
+        ask_election = ask_election + "[" + f"{(i+1)}" +"] for " + election_options[i] + " "
+# Print the option on console
+print (f"\n-------------------------\n"
+       f"{ask_election}" )   
+# Ask for the option 
+election_define = input("Define an election: ")
+election_define = election_options[int(election_define)-1]
+print (f"-------------------------\n")
+# ----------------------------------------------------------------------------
 
 
 # Read the csv and convert it into a list of dictionaries
@@ -56,49 +84,59 @@ with open(file_to_load) as election_data:
     # For each row in the CSV file.
     for row in reader:
 
-        # Add to the total vote count
-        total_votes = total_votes + 1
+        # Modification 2
+        # Extract the election from each row.
+        election = row [3]
 
-        # Get the candidate name from each row.
-        candidate_name = row[2]
+        # Add to the total vote count    
+        # total_votes = total_votes + 1
 
-        # 3: Extract the county name from each row.
-        county_name = row [1]
+        # Modification 2 - Comment line 92, uncommment 95-96. Indent the lines from 98 to 128 (1 tab)
+        if election == election_define :
+            total_votes = total_votes + 1
 
-        # If the candidate does not match any existing candidate add it to
-        # the candidate list
-        if candidate_name not in candidate_options:
+            # Get the candidate name from each row.
+            candidate_name = row[2]
 
-            # Add the candidate name to the candidate list.
-            candidate_options.append(candidate_name)
+            # 3: Extract the county name from each row.
+            county_name = row [1]
+            
+            # If the candidate does not match any existing candidate add it to
+            # the candidate list
+            if candidate_name not in candidate_options:
 
-            # And begin tracking that candidate's voter count.
-            candidate_votes[candidate_name] = 0
+                # Add the candidate name to the candidate list.
+                candidate_options.append(candidate_name)
 
-        # Add a vote to that candidate's count
-        candidate_votes[candidate_name] += 1
+                # And begin tracking that candidate's voter count.
+                candidate_votes[candidate_name] = 0 
 
-        # 4a: Write an if statement that checks that the
-        # county does not match any existing county in the county list.
-        if county_name not in county_list:
+            # Add a vote to that candidate's count
+            candidate_votes[candidate_name] += 1
 
-            # 4b: Add the existing county to the list of counties.
-            county_list.append(county_name)
+            # 4a: Write an if statement that checks that the
+            # county does not match any existing county in the county list.
+            if county_name not in county_list:
 
-            # 4c: Begin tracking the county's vote count.
-            county_votes[county_name] = 0
+                # 4b: Add the existing county to the list of counties.
+                county_list.append(county_name)
 
-        # 5: Add a vote to that county's vote count.
-        county_votes[county_name] += 1
+                # 4c: Begin tracking the county's vote count.
+                county_votes[county_name] = 0
 
-
+            # 5: Add a vote to that county's vote count.
+            county_votes[county_name] += 1
 
 # Save the results to our text file.
 with open(file_to_save, "w") as txt_file:
 
     # Print the final vote count (to terminal)
     election_results = (
-        f"\nElection Results\n"
+        #f"\nElection Results\n"
+        
+        # Modification 2
+        f"\n{election_define} Election Results\n"
+        
         f"-------------------------\n"
         f"Total Votes: {total_votes:,}\n"
         f"-------------------------\n\n"

@@ -75,8 +75,33 @@ To prove the code please follow these steps:
 
 
 ### Modification 2
+If possible to use this code to read mixed results. The data of the votes of different elections are in the same file. It's possible to select a defined group of data.
 
+To prove the code please follow these steps:
 
+1. Activate the "Modification 1"
+2. Uncomment lines from line 47-74 
+3. Uncomment line 89
 
+![alt text](./Resources/modification2-1.png)
 
-get the result for county, input the county we need.
+4. Comment line 92
+
+![alt text](./Resources/modification2-2.png)
+
+5. Uncomment lines 95, 96
+6. Indent the lines from 98 to 128 (1 tab)
+
+![alt text](./Resources/modification2-3.png)
+
+7. Comment line 135
+
+![alt text](./Resources/modification2-4.png)
+
+8. Uncomment line 138
+9.  Run PyPoll_Challenge.py
+10. In this case, we will work with the file that is in the folder Resources; the program will ask for the name of the file, please type "election_results_Mod2.csv"
+11. The program will read the file and process the data.
+12. The program will print the result on the console. 
+13. The program will write the result on the election_analysis.txt file in the Analysis folder. 
+
