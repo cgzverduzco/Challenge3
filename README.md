@@ -59,11 +59,11 @@ The current code can be used to read another ".csv" file.
 
 To prove the code please follow these steps:
 
-1. Uncomment line 10 
+1. Uncomment line 11 
     - name_file = input("Enter the name of the csv: ")
-2. Comment line 13
+2. Comment line 14
     - file_to_load = os.path.join("Resources", "election_results.csv")
-3. Uncomment line 16
+3. Uncomment line 17
     - file_to_load = os.path.join("Resources", name_file)
 4. Run PyPoll_Challenge.py
 5. In this case, we will work with the file that is in the folder Resources; the program will ask for the name of the file, please type "election_results_Mod1.csv"
@@ -81,14 +81,14 @@ To prove the code please follow these steps:
 
 1. Activate the "Modification 1"
 2. Uncomment lines from line 47-74 
-3. Uncomment line 89
 
 ![alt text](./Resources/modification2-1.png)
 
-4. Comment line 92
+3. Uncomment line 89
 
 ![alt text](./Resources/modification2-2.png)
 
+4. Comment line 92
 5. Uncomment lines 95, 96
 6. Indent the lines from 98 to 128 (1 tab)
 

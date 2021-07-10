@@ -6,15 +6,15 @@ from collections import Counter
 import csv
 import os
 
-# Modification 1 uncomment line 10
+# **********************      Modification 1 uncomment line 10
 # It can read other cvs, and generate the analysis about this information. It's has to be in the Resorces folder.
-# name_file = input("Enter the name of the csv: ")
+name_file = input("Enter the name of the csv: ")
 
 # Add a variable to load a file from a path. For Modification 1. Comment line 13
-file_to_load = os.path.join("Resources", "election_results_Mod2.csv")
+# file_to_load = os.path.join("Resources", "election_results_Mod2.csv")
 
-# Modification 1 uncomment line 16
-# file_to_load = os.path.join("Resources", name_file)
+# ********************** Modification 1 uncomment line 17
+file_to_load = os.path.join("Resources", name_file)
 
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_analysis.txt")
@@ -44,7 +44,7 @@ turnout_county = ""
 turnout_votes = 0
 turnout_percentage = 0
 
-# Modification 2 ----------------------------------------------------------- Lines 47 to 74
+# ********************** Modification 2 ----------------------------------------------------------- Lines 47 to 74
 # Create list for get the uniques values in the colummns in the file
 election_options = []   
 # Create string for asking
@@ -84,14 +84,14 @@ with open(file_to_load) as election_data:
     # For each row in the CSV file.
     for row in reader:
 
-        # Modification 2
+        # ********************** Modification 2
         # Extract the election from each row.
         election = row [3]
 
         # Add to the total vote count    
         # total_votes = total_votes + 1
 
-        # Modification 2 - Comment line 92, uncommment 95-96. Indent the lines from 98 to 128 (1 tab)
+        # ********************** Modification 2 - Comment line 92, uncommment 95-96. Indent the lines from 98 to 128 (1 tab)
         if election == election_define :
             total_votes = total_votes + 1
 
@@ -134,7 +134,7 @@ with open(file_to_save, "w") as txt_file:
     election_results = (
         #f"\nElection Results\n"
         
-        # Modification 2
+        # ********************** Modification 2
         f"\n{election_define} Election Results\n"
         
         f"-------------------------\n"
