@@ -1,5 +1,5 @@
 # Election_Analysis
-Module 3 Bootcamp Python
+Python
 
 ## Proyect Overview
 A Colorado Board of Elections employee has given me the following task to complete the election audit of a recent local congressional election. The purpose of this audit is to verify the numbers with the official counting, define how many voters registered for each county, who is the candidate who won in the popular vote and even we can get the result for each county.
